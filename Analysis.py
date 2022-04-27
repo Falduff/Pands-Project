@@ -57,6 +57,7 @@ with open('Summary.txt','w') as s:
     s.write("\n")
     s.write('\n'.join(lines7))
 
+
 #2 Histogram for each variable
 
 #Sepal Length Histogram
@@ -97,4 +98,61 @@ plt.title("Distribution of Species",fontsize = 15)
 plt.xlabel("Species Name", fontsize = 10)
 plt.ylabel("Frequency of Species", fontsize = 10)
 plt.savefig('variety.png')
+plt.clf()
+
+
+
+#3 Scatter Plots of Each variable pair
+#Sepal Length and Sepal Width
+df.plot(kind='scatter',x='sepal.length',y='sepal.width')
+plt.title("Sepal Length vs Sepal Width Scatter",fontsize = 15)
+plt.xlabel("Sepal Length", fontsize = 10)
+plt.ylabel("Sepal Width", fontsize = 10)
+plt.savefig('slength vs swidth.png')
+plt.show()
+plt.clf()
+
+#Sepal Length and Petal Length
+df.plot(kind='scatter',x='sepal.length',y='petal.length')
+plt.title("Sepal Length vs Petal Length Scatter",fontsize = 15)
+plt.xlabel("Sepal Length", fontsize = 10)
+plt.ylabel("Petal Length", fontsize = 10)
+plt.savefig('slength vs plength.png')
+plt.show()
+plt.clf()
+
+#Petal Length and Petal Width
+df.plot(kind='scatter',x='petal.length',y='petal.width')
+plt.title("Petal Length vs Petal Width Scatter",fontsize = 15)
+plt.xlabel("Petal Length", fontsize = 10)
+plt.ylabel("Petal Width", fontsize = 10)
+plt.savefig('plength vs pwidth.png')
+plt.show()
+plt.clf()
+
+#Sepal Width and Petal Width
+df.plot(kind='scatter',x='sepal.width',y='petal.width')
+plt.title("Sepal Width vs Petal Width Scatter",fontsize = 15)
+plt.xlabel("Sepal Width", fontsize = 10)
+plt.ylabel("Petal Width", fontsize = 10)
+plt.savefig('swidth vs pwidth.png')
+plt.show()
+plt.clf()
+
+#Sepal Length and Petal Width
+df.plot(kind='scatter',x='sepal.length',y='petal.width')
+plt.title("Sepal Length vs Petal Width Scatter",fontsize = 15)
+plt.xlabel("Sepal Length", fontsize = 10)
+plt.ylabel("Petal Width", fontsize = 10)
+plt.savefig('slength vs pwidth.png')
+plt.show()
+plt.clf()
+
+#Petal Length and Sepal Width
+df.plot(kind='scatter',x='petal.length',y='sepal.width')
+plt.title("Petal Length vs Sepal Width Scatter",fontsize = 15)
+plt.xlabel("Petal Length", fontsize = 10)
+plt.ylabel("Sepal Width", fontsize = 10)
+plt.savefig('plength vs swidth.png')
+plt.show()
 plt.clf()
