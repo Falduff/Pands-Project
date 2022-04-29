@@ -65,15 +65,18 @@ with open('Summary.txt','w') as s:
 
 
 #2 Histogram for each variable
+#Bins refers to the size of the bars on the histogram
+#Title and labels added using matplotlib
+#Histograms made using matplotlib
+#Histograms all saved to png files 
+#plt.clf clears the plot figure, so that plots do not overlap on top of each other
 
 #Sepal Length Histogram
 plt.hist(df['sepal.length'], bins=30)
 plt.title("Distribution of Sepal Length",fontsize = 15)
 plt.xlabel("Sepal Length in cm", fontsize = 10)
 plt.ylabel("Frequency of Species", fontsize = 10)
-#line 69 saves the histogram to a png file
 plt.savefig('sepal_length.png')
-#line 70 clears the plot figure, so that plots do not overlap on top of each other
 plt.clf()
 
 #Sepal Width Histogram
@@ -111,13 +114,16 @@ plt.clf()
 
 
 #3 Scatter Plots of Each variable pair
+#Seaborn used to create scatterplot to add a hue to the variety.
+#Plot design still makes use of matplotlib (titles and axis)
+#All scatter plots are outputted to png files
+
 #Sepal Length and Sepal Width
 a = sns.scatterplot(x="sepal.length", y="sepal.width", hue="variety", data=df)
 plt.title("Sepal Length vs Sepal Width Scatter",fontsize = 15)
 plt.xlabel("Sepal Length", fontsize = 10)
 plt.ylabel("Sepal Width", fontsize = 10)
 plt.savefig('slength vs swidth.png')
-colors = {'Setosa':'red', 'Versicolor':'green', 'Virginica':'blue'}
 
 #plt.show()
 plt.clf()
@@ -167,3 +173,34 @@ plt.savefig('plength vs swidth.png')
 #plt.show()
 plt.clf()
 
+
+#Boxplot subplots used to see how the value of numerical variables is distributed between categorical variables
+def graph(y):
+    sns.boxplot(x="variety", y=y, data=df)
+
+  
+plt.figure(figsize=(9,9))
+      
+# Adding the subplot at the specified grid position
+
+plt.subplot(221)
+graph('sepal.length')
+plt.ylabel("Sepal Length", fontsize = 10)
+plt.title("Sepal Length for each Variety")
+
+plt.subplot(222)
+graph('sepal.width')
+plt.ylabel("Sepal Width", fontsize = 10)
+plt.title("Sepal Width for each Variety")
+
+plt.subplot(223)
+graph('petal.length')
+plt.ylabel("Petal Length", fontsize = 10)
+plt.title("Petal Length for each Variety")
+
+plt.subplot(224)
+graph('petal.width')
+plt.ylabel("Petal Width", fontsize = 10)
+plt.title("Petal Width for each Variety")
+
+plt.savefig('Boxplots.png')
