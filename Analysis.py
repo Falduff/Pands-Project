@@ -16,15 +16,6 @@ lines3 = [(len(df))]
 lines4 = [(len(df.columns))]
 lines5 = [(df.__sizeof__())]
 lines6 = (df.info(verbose=True))
-lines7 = ['Summary of Variables','There are 5 variables in the Iris flower data set:',
-'Sepal Length, Sepal Width, Petal Length, Petal Width and Variety of the flower.',
-'The first 4 variables create a linear discriminant model to classify the Variety.',
-'','Sepal Length',
-'The sepal is the part of the flower that protects the flower when it is in bud.',
-'The sepal length is measured from the middle of the flower to the outermost edge of the sepal','',
-'Sepal Width','This is a measurement across the widest part of the sepal','',
-'Petal Length','This is measured from the middle of the flower to the end of the petal',
-'', 'Petal Width','This is a measurement across the widest part of the petal']
 
 lines8 = (df.nunique())
 lines9 = df.drop_duplicates(subset ="variety",)
@@ -59,9 +50,7 @@ with open('Summary.txt','w') as s:
     s.write("Number of elements in the Dataset")
     s.write("\n")
     s.write(str(lines5))
-    s.write("\n")
-    s.write("\n")
-    s.write('\n'.join(lines7))
+
 
 
 #2 Histogram for each variable
