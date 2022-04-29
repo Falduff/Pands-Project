@@ -7,7 +7,7 @@ from pydoc import describe
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-
+import seaborn as sns
 #1. Summary text file
 df = pd.read_csv("iris.csv")
 lines = (df.describe())
@@ -27,6 +27,9 @@ lines7 = ['Summary of Variables','There are 5 variables in the Iris flower data 
 '', 'Petal Width','This is a measurement across the widest part of the petal']
 
 lines8 = (df.nunique())
+lines9 = df.drop_duplicates(subset ="variety",)
+
+
 
 with open('Summary.txt','w') as s:
     s.write("Description of the Data")
@@ -37,9 +40,12 @@ with open('Summary.txt','w') as s:
     s.write("\n")
     s.write(str(lines8))
     s.write(2*"\n")
-
-    s.write("First 5 rows of the Dataset")
+    s.write("Varieties of Species")
+    s.write("\n")
+    s.write(str(lines9))
     s.write(2*"\n")
+    s.write("First 5 rows of the Dataset")
+    s.write("\n")
     s.write(str(lines2))
     s.write(2*"\n")
     s.write("Number of Rows in the Dataset")
@@ -65,7 +71,9 @@ plt.hist(df['sepal.length'], bins=30)
 plt.title("Distribution of Sepal Length",fontsize = 15)
 plt.xlabel("Sepal Length in cm", fontsize = 10)
 plt.ylabel("Frequency of Species", fontsize = 10)
+#line 69 saves the histogram to a png file
 plt.savefig('sepal_length.png')
+#line 70 clears the plot figure, so that plots do not overlap on top of each other
 plt.clf()
 
 #Sepal Width Histogram
@@ -104,55 +112,58 @@ plt.clf()
 
 #3 Scatter Plots of Each variable pair
 #Sepal Length and Sepal Width
-df.plot(kind='scatter',x='sepal.length',y='sepal.width')
+a = sns.scatterplot(x="sepal.length", y="sepal.width", hue="variety", data=df)
 plt.title("Sepal Length vs Sepal Width Scatter",fontsize = 15)
 plt.xlabel("Sepal Length", fontsize = 10)
 plt.ylabel("Sepal Width", fontsize = 10)
 plt.savefig('slength vs swidth.png')
-plt.show()
+colors = {'Setosa':'red', 'Versicolor':'green', 'Virginica':'blue'}
+
+#plt.show()
 plt.clf()
 
 #Sepal Length and Petal Length
-df.plot(kind='scatter',x='sepal.length',y='petal.length')
+b = sns.scatterplot(x="sepal.length", y="petal.length", hue="variety", data=df)
 plt.title("Sepal Length vs Petal Length Scatter",fontsize = 15)
 plt.xlabel("Sepal Length", fontsize = 10)
 plt.ylabel("Petal Length", fontsize = 10)
 plt.savefig('slength vs plength.png')
-plt.show()
+#plt.show()
 plt.clf()
 
 #Petal Length and Petal Width
-df.plot(kind='scatter',x='petal.length',y='petal.width')
+c = sns.scatterplot(x="petal.length", y="petal.width", hue="variety", data=df)
 plt.title("Petal Length vs Petal Width Scatter",fontsize = 15)
 plt.xlabel("Petal Length", fontsize = 10)
 plt.ylabel("Petal Width", fontsize = 10)
 plt.savefig('plength vs pwidth.png')
-plt.show()
+#plt.show()
 plt.clf()
 
 #Sepal Width and Petal Width
-df.plot(kind='scatter',x='sepal.width',y='petal.width')
+d = sns.scatterplot(x="sepal.width", y="petal.width", hue="variety", data=df)
 plt.title("Sepal Width vs Petal Width Scatter",fontsize = 15)
 plt.xlabel("Sepal Width", fontsize = 10)
 plt.ylabel("Petal Width", fontsize = 10)
 plt.savefig('swidth vs pwidth.png')
-plt.show()
+#plt.show()
 plt.clf()
 
 #Sepal Length and Petal Width
-df.plot(kind='scatter',x='sepal.length',y='petal.width')
+e = sns.scatterplot(x="sepal.length", y="petal.width", hue="variety", data=df)
 plt.title("Sepal Length vs Petal Width Scatter",fontsize = 15)
 plt.xlabel("Sepal Length", fontsize = 10)
 plt.ylabel("Petal Width", fontsize = 10)
 plt.savefig('slength vs pwidth.png')
-plt.show()
+#plt.show()
 plt.clf()
 
 #Petal Length and Sepal Width
-df.plot(kind='scatter',x='petal.length',y='sepal.width')
+f = sns.scatterplot(x="petal.length", y="sepal.width", hue="variety", data=df)
 plt.title("Petal Length vs Sepal Width Scatter",fontsize = 15)
 plt.xlabel("Petal Length", fontsize = 10)
 plt.ylabel("Sepal Width", fontsize = 10)
 plt.savefig('plength vs swidth.png')
-plt.show()
+#plt.show()
 plt.clf()
+
