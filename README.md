@@ -77,6 +77,7 @@ The boxplots show the distribution of each variable for each variety as the blac
 Conclusion
 The Fisher Iris Dataset is of sufficient size to perform many basic analytical techniques on. These techniques and graphs can be used to identify a variety of this species when given the length and width of its petals and/or sepals.
 -For Example:
+     
      If you are given
      sepal length = 5cm
      petal length = 1.5cm 
