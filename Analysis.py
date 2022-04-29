@@ -72,42 +72,42 @@ with open('Summary.txt','w') as s:
 #plt.clf clears the plot figure, so that plots do not overlap on top of each other
 
 #Sepal Length Histogram
-plt.hist(df['sepal.length'], bins=30)
+sns.histplot(data = df, x = "sepal.length", hue="variety")
 plt.title("Distribution of Sepal Length",fontsize = 15)
 plt.xlabel("Sepal Length in cm", fontsize = 10)
-plt.ylabel("Frequency of Species", fontsize = 10)
+plt.ylabel("Frequency of Variety", fontsize = 10)
 plt.savefig('sepal_length.png')
 plt.clf()
 
 #Sepal Width Histogram
-plt.hist(df['sepal.width'], bins=30)
+sns.histplot(data = df, x = "sepal.width", hue="variety")
 plt.title("Distribution of Sepal Width",fontsize = 15)
 plt.xlabel("Sepal Width in cm", fontsize = 10)
-plt.ylabel("Frequency of Species", fontsize = 10)
+plt.ylabel("Frequency of Variety", fontsize = 10)
 plt.savefig('sepal_width.png')
 plt.clf()
 
 #Petal Length Histogram
-plt.hist(df['petal.length'], bins=30)
+sns.histplot(data = df, x = "petal.length", hue="variety")
 plt.title("Distribution of Petal Length",fontsize = 15)
 plt.xlabel("Petal Length in cm", fontsize = 10)
-plt.ylabel("Frequency of Species", fontsize = 10)
+plt.ylabel("Frequency of Variety", fontsize = 10)
 plt.savefig('petal_length.png')
 plt.clf()
 
 #Petal Width Histogram
-plt.hist(df['petal.width'], bins=30)
+sns.histplot(data = df, x = "petal.width", hue="variety")
 plt.title("Distribution of Petal Width",fontsize = 15)
 plt.xlabel("Petal Width in cm", fontsize = 10)
-plt.ylabel("Frequency of Species", fontsize = 10)
+plt.ylabel("Frequency of Variety", fontsize = 10)
 plt.savefig('petal_width.png')
 plt.clf()
 
 #Variety of Species Histogram
-plt.hist(df['variety'], bins=30)
+sns.histplot(data = df, x = "variety", hue="variety")
 plt.title("Distribution of Species",fontsize = 15)
 plt.xlabel("Species Name", fontsize = 10)
-plt.ylabel("Frequency of Species", fontsize = 10)
+plt.ylabel("Frequency of Variety", fontsize = 10)
 plt.savefig('variety.png')
 plt.clf()
 
@@ -116,7 +116,7 @@ plt.clf()
 #3 Scatter Plots of Each variable pair
 #Seaborn used to create scatterplot to add a hue to the variety.
 #Plot design still makes use of matplotlib (titles and axis)
-#All scatter plots are outputted to png files
+#All scatter plots are outputted to individual png files png files
 
 #Sepal Length and Sepal Width
 a = sns.scatterplot(x="sepal.length", y="sepal.width", hue="variety", data=df)
