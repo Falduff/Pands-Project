@@ -91,3 +91,24 @@ The Fisher Iris Dataset is of sufficient size to perform many basic analytical t
 This analysis would be much tougher to carry out while looking at the csv file but when the data science techniques are carried out and visuals are created, this analysis becomes much easier.
 
 Furthermore the dataset also provides a good dataframe for very useful libraries such as matplotlib, numpy, pandas and seaborn to be expressed. The functions from these libraries prove very efficient in producing all necesarry data summaries and plots, and give a good degree of scope for customisation (of the plots).
+
+
+References
+Andrew Beatty 2022, Accessed 2022 <https://learnonline.gmit.ie/course/view.php?id=5057#section-11>
+Elina Loseva 2018, Accessed 2022 <http://rstudio-pubs-static.s3.amazonaws.com/450733_9a472ce9632f4ffbb2d6175aaaee5be6.html>
+Aditya Jetely 2020 Accessed 29-04-2022 <https://towardsdatascience.com/eda-of-the-iris-dataset-190f6dfd946d>
+Pranshu Sharma 2021, Accessed 29-04-2022 <https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda>
+GeeksforGeeks 2022 Accessed 30-04-2022 <https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/>
+<https://www.geeksforgeeks.org/plotting-graph-for-iris-dataset-using-seaborn-and-matplotlib/>
+curran 2022, accessed 27-04-2022 <https://gist.github.com/curran/a08a1080b88344b0c8a7>
+Zach  2021, accessed 27-04-2022 <https://www.statology.org/iris-dataset-r/>
+scikit-learn.org, accessed 30-04-2022 <https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html>
+Injemamul Irshad 2021, accessed 27-04-2022 <https://njkhanh.com/iris-flower-classification-step-by-step-tutorial-p5f313139>
+Michael Friendly and Matthew Sigal 2016, Accessed 31-04-2022 <https://mattsigal.github.io/eqcov_supp/iris-ex.html>
+Saral Gyaan , accessed 27-04-2022 <https://saralgyaan.com/posts/matplotlib-tutorial-in-python-chapter-6-scatter-plotting/>
+Stackoverflow, accessed 04-2022 <https://stackoverflow.com/questions/36018681/stop-seaborn-plotting-multiple-figures-on-top-of-one-another>
+<https://stackoverflow.com/questions/52385428/plot-point-markers-and-lines-in-different-hues-but-the-same-style-with-seaborn>
+<https://stackoverflow.com/questions/6916978/how-do-i-tell-matplotlib-to-create-a-second-new-plot-then-later-plot-on-the-o>
+<https://stackoverflow.com/questions/27157522/pandas-plot-histogram-data-frame-index>
+Zolzaya Luvsandorj 2021 <https://towardsdatascience.com/4-simple-tips-for-plotting-multiple-graphs-in-python-38df2112965c>
+Preeya Sawadmanod 2019 accessed 27-04-2022<https://medium.com/analytics-vidhya/editing-data-visualization-in-python-64f42225ba21>
