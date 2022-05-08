@@ -9,6 +9,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 #1. Summary text file
+#This code uses functions to produce the summary outputs of the dataset. iris.csv
+#The dataframe (df) is defined as iris.csv
+#Each function is defined by lines followed by a number.
+#This was to make it easier when writing and formatting the text file (line 33)
+#The pandas library is used extensively here.
+
 df = pd.read_csv("iris.csv")
 lines = (df.describe())
 lines2 = (df.head())
@@ -21,7 +27,10 @@ lines8 = (df.nunique())
 lines9 = df.drop_duplicates(subset ="variety",)
 
 
-
+#The following code is used to output the different functions above as strings
+#Into the Summary.txt file. It makes use of the s.write function and \n to
+#forat the text in a neat way and as to space it out in the text file.
+#The headings are also added above each output here.
 with open('Summary.txt','w') as s:
     s.write("Description of the Data")
     s.write(2*"\n")
@@ -171,6 +180,7 @@ def graph(y):
 plt.figure(figsize=(9,9))
       
 # Adding the subplot at the specified grid position
+# y labels and titles are also added to the subplots here.
 
 plt.subplot(221)
 graph('sepal.length')

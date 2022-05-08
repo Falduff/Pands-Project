@@ -26,6 +26,7 @@ The first 4 variables create a linear discriminant model to classify the Variety
 
 
 Analysis.py
+This file can be run using py .\Analysis.py
 This is a python file that carries out analytical tasks on the Iris Data set which is contained in the Comma Separated Value file iris.csv. The dataframe used in Analysis.py (df) is read directly from this csv file using pandas. This file outputs a description of the dataset to Summary.txt, along with outputting histograms to png files, followed by outputting scatter plots of each variable pair to png files. A boxplot of each variable is also outputted to a png file.
 
 Summary.txt
